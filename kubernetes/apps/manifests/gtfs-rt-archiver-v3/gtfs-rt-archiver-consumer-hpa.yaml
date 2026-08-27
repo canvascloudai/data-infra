@@ -1,0 +1,21 @@
+# retrigger after CWM #3774
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: gtfs-rt-archiver-consumer
+  labels:
+    name: gtfs-rt-archiver-consumer
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: gtfs-rt-archiver-consumer
+  minReplicas: 3
+  maxReplicas: 10
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70
