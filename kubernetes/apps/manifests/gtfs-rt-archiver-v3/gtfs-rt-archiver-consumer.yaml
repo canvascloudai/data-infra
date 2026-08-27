@@ -1,4 +1,3 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -37,10 +36,10 @@ spec:
               mountPath: /secrets/gtfs-feed-secrets
           resources:
             requests:
-              memory: 512Mi
+              memory: 2.5Gi
               cpu: 1
             limits:
-              memory: 1Gi
+              memory: 4Gi
           livenessProbe:
             exec:
               command:
