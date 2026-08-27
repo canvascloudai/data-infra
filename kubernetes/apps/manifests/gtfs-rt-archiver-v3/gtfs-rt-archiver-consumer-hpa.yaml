@@ -1,4 +1,4 @@
-# retrigger after CWM #3756
+# retrigger after CWM GitHub App kubernetesMemoryProfile deploy
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
