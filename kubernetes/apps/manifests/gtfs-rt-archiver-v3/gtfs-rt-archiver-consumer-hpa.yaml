@@ -1,4 +1,4 @@
-# retrigger after CWM #3774
+# retrigger after CWM #3779
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
